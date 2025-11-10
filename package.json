@@ -10,7 +10,10 @@
     "format": "biome format --write",
     "check:type": "tsc --noEmit",
     "check:circular-deps": "madge -c --extensions ts,tsx .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "release:patch": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:major": "standard-version --release-as major"
   },
   "dependencies": {
     "next": "16.0.1",
@@ -28,6 +31,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.2.6",
     "madge": "^8.0.0",
+    "standard-version": "^9.5.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
