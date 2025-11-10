@@ -1,9 +1,9 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center font-sans">
-      <h1 className="text-5xl/10 font-semibold tracking-tight text-foreground">
-        <span className="font-mono text-primary">Hello</span> World!
-      </h1>
+      <Image src="/logo/logo_single.png" alt="Logo" width={200} height={200} />
     </div>
   );
 }
