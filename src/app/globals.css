@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  @apply h-svh lg:h-screen w-full overflow-hidden;
+  @apply h-svh xl:h-screen xl:min-h-180 w-full overflow-hidden;
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-alexandria);
