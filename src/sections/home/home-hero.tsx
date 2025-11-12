@@ -19,7 +19,7 @@ export default function HomeHero() {
         className="w-fit m-4 text-foreground hover:opacity-70 transition-opacity flex items-baseline"
       >
         <div className="text-8xl/18 font-mono">01.</div>
-        <div className="text-[64px] leading-16 uppercase flex items-center">
+        <div className="text-[64px]/16 uppercase flex items-center">
           Resume
           <Iconify icon="ph:arrow-up-right-thin" className="size-16" />
         </div>
