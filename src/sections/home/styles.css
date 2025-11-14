@@ -1,0 +1,17 @@
+.home-background {
+  @apply relative bg-foreground bg-no-repeat bg-center bg-cover;
+}
+
+.home-background::after {
+  content: "";
+  @apply absolute inset-0 shadow-[inset_0_0_250px_72px] shadow-foreground bg-black/30 z-1;
+}
+
+.home-background::before {
+  content: "";
+  @apply absolute inset-0 bg-[url('/assets/home_background.png')] bg-cover bg-center opacity-50 z-0;
+}
+
+.home-background > * {
+  @apply z-10;
+}
