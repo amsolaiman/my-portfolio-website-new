@@ -1,5 +1,6 @@
 "use client";
 
+import { ReactLenis } from "lenis/react";
 //
 import Header from "./header";
 
@@ -11,10 +12,12 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   return (
-    <div className="h-full">
-      <Header />
+    <ReactLenis root>
+      <div className="h-full">
+        <Header />
 
-      <main className="grow">{children}</main>
-    </div>
+        <main className="grow">{children}</main>
+      </div>
+    </ReactLenis>
   );
 }
