@@ -24,7 +24,6 @@ html {
 }
 
 body {
-  @apply w-full overflow-hidden;
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-fira-code);
