@@ -1,0 +1,17 @@
+.hero-background {
+  @apply relative bg-no-repeat bg-top bg-cover;
+}
+
+.hero-background::after {
+  content: "";
+  @apply absolute inset-0 bg-linear-to-b from-black via-black/0 to-black z-1;
+}
+
+.hero-background::before {
+  content: "";
+  @apply absolute inset-0 bg-[url('/assets/hero_background.png')] bg-cover bg-center opacity-50 z-0;
+}
+
+.hero-background > * {
+  @apply z-10;
+}

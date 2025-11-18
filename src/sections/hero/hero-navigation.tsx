@@ -2,7 +2,7 @@ import Link from "next/link";
 
 // ----------------------------------------------------------------------
 
-export default function HomeNavigation() {
+export default function HeroNavigation() {
   const LINKS = [
     {
       label: "About",

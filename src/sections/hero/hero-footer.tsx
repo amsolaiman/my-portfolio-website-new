@@ -2,7 +2,7 @@ import Link from "next/link";
 
 // ----------------------------------------------------------------------
 
-export default function HomeFooter() {
+export default function HeroFooter() {
   return (
     <div className="flex items-center justify-between">
       <p className="text-xs font-light uppercase opacity-50">Scoll down</p>

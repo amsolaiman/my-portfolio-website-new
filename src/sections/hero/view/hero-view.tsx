@@ -1,13 +1,13 @@
 import Image from "next/image";
 //
-import HomeFooter from "../home-footer";
-import HomeNavigation from "../home-navigation";
+import HeroFooter from "../hero-footer";
+import HeroNavigation from "../hero-navigation";
 
 // ----------------------------------------------------------------------
 
-export default function HomeView() {
+export default function HeroView() {
   return (
-    <section id="home" className="w-full h-svh flex flex-col">
+    <section id="hero" className="w-full h-svh flex flex-col">
       <Image
         src="/assets/hero_brand_name.svg"
         alt="Hero Brand"
@@ -17,10 +17,10 @@ export default function HomeView() {
         className="w-full h-fit object-top object-cover"
       />
 
-      <div className="home-background w-full p-4 grow flex flex-col justify-between">
-        <HomeNavigation />
+      <div className="hero-background w-full p-4 grow flex flex-col justify-between">
+        <HeroNavigation />
 
-        <HomeFooter />
+        <HeroFooter />
       </div>
     </section>
   );
