@@ -1,19 +1,35 @@
 import type { Metadata } from "next";
-import { Abel, Alexandria } from "next/font/google";
+import { Fira_Code } from "next/font/google";
+import localFont from "next/font/local";
 // styles
 import "./globals.css";
 
 // ----------------------------------------------------------------------
 
-const fontSans = Alexandria({
-  variable: "--font-alexandria",
-  subsets: ["latin"],
+const fontSans = localFont({
+  src: [
+    {
+      path: "../../public/assets/fonts/HelveticaNeue100.otf",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "../../public/assets/fonts/HelveticaNeue200.otf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../../public/assets/fonts/HelveticaNeue400.otf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-helvetica-neue",
 });
 
-const fontMono = Abel({
-  variable: "--font-abel",
+const fontMono = Fira_Code({
+  variable: "--font-fira-code",
   subsets: ["latin"],
-  weight: "400",
 });
 
 // ----------------------------------------------------------------------

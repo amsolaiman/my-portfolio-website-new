@@ -1,7 +1,8 @@
+// sections
 import HomeView from "@/sections/home/view";
 
 // ----------------------------------------------------------------------
 
-export default function HomePage() {
+export default function Page() {
   return <HomeView />;
 }
