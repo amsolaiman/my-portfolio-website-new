@@ -5,8 +5,8 @@
 :root {
   --primary: #a349a3;
   --secondary: #f06eaa;
-  --background: #ffffff;
-  --foreground: #181818;
+  --foreground: #fff;
+  --background: #000;
 }
 
 @theme inline {
@@ -15,8 +15,8 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --font-sans: var(--font-alexandria);
-  --font-mono: var(--font-abel);
+  --font-sans: var(--font-helvetica-neue);
+  --font-mono: var(--font-fira-code);
 }
 
 html {
@@ -27,7 +27,7 @@ body {
   @apply w-full overflow-hidden;
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-alexandria);
+  font-family: var(--font-fira-code);
 }
 
 ::-webkit-scrollbar {
