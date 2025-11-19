@@ -17,9 +17,16 @@ export default function Layout({ children }: Props) {
 
   useEffect(() => {
     const footer = document.getElementById("footer");
-    if (footer) {
+
+    if (!footer) return;
+    setFooterHeight(footer.offsetHeight);
+
+    const observer = new ResizeObserver(() => {
       setFooterHeight(footer.offsetHeight);
-    }
+    });
+    observer.observe(footer);
+
+    return () => observer.disconnect();
   }, []);
 
   return (
