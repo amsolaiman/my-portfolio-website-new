@@ -1,19 +1,25 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect } from "react";
 
 // ----------------------------------------------------------------------
 
 export default function Header() {
-  const showOnScroll = () => {
-    const cv = document.getElementById("header")?.classList;
+  useEffect(() => {
+    const showOnScroll = () => {
+      const headerClasses = document.getElementById("header")?.classList;
 
-    if (window.scrollY > window.innerHeight) {
-      cv?.add("translate-y-0");
-    } else {
-      cv?.remove("translate-y-0");
-    }
-  };
+      if (window.scrollY > window.innerHeight) {
+        headerClasses?.add("translate-y-0");
+      } else {
+        headerClasses?.remove("translate-y-0");
+      }
+    };
+    window.addEventListener("scroll", showOnScroll);
 
-  window.addEventListener("scroll", showOnScroll);
+    return () => window.removeEventListener("scroll", showOnScroll);
+  }, []);
 
   const LINKS = [
     {
