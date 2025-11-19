@@ -1,7 +1,7 @@
 import Image from "next/image";
 //
-import HeroFooter from "../hero-footer";
-import HeroNavigation from "../hero-navigation";
+import HeroFooter from "./hero-footer";
+import HeroNavigation from "./hero-navigation";
 
 // ----------------------------------------------------------------------
 
