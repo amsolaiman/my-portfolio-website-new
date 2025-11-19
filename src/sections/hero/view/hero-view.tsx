@@ -14,7 +14,7 @@ export default function HeroView() {
         width={1280}
         height={125}
         draggable={false}
-        className="w-full h-fit object-top object-cover"
+        className="-mt-1 w-full h-fit object-top object-cover"
       />
 
       <div className="hero-background w-full p-4 grow flex flex-col justify-between">

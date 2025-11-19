@@ -9,8 +9,6 @@ export default function Page() {
   return (
     <Layout>
       <HeroView />
-
-      <div className="h-[200vh]" />
     </Layout>
   );
 }
