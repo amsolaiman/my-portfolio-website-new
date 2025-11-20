@@ -51,6 +51,16 @@ export default function Header() {
             <Link
               key={link.label}
               href={link.href}
+              onClick={(e) => {
+                if (link.href.startsWith("#")) {
+                  const id = link.href.substring(1);
+
+                  e.preventDefault();
+                  document.getElementById(id)?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }
+              }}
               className="hover:opacity-70 transition-opacity"
             >
               {link.label}
