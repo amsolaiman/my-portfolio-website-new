@@ -54,8 +54,8 @@ export default function ExperienceView() {
         </h5>
       </div>
 
-      <div className="w-full border-t flex justify-end">
-        <div className="flex flex-col divide-y w-3/4">
+      <div className="w-full border-t border-foreground/70 flex justify-end">
+        <div className="flex flex-col divide-y divide-foreground/70 w-3/4">
           {categorizeArray(experience).map((group, gIndex, gArray) => {
             const isLastGroup = gIndex === gArray.length - 1;
 
@@ -65,7 +65,7 @@ export default function ExperienceView() {
                   {group.year}
                 </p>
 
-                <div className="flex flex-col divide-y w-full">
+                <div className="flex flex-col divide-y divide-foreground/70 w-full">
                   {group.items.map((exp, eIndex) => {
                     const startDate = format(exp.startDate, "MMM.yyyy");
 
@@ -83,7 +83,9 @@ export default function ExperienceView() {
                         key={exp.title + eIndex}
                         className={cn(
                           "py-2 flex flex-col min-h-20",
-                          isLastGroup && isLastItem && "border-b",
+                          isLastGroup &&
+                            isLastItem &&
+                            "border-b border-foreground/70",
                         )}
                       >
                         <div className="flex items-baseline gap-2">
