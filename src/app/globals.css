@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @import "../sections/hero/styles.css";
+@import "../sections/quote/styles.css";
 
 :root {
   --primary: #a349a3;
