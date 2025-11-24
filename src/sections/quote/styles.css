@@ -1,0 +1,17 @@
+.quote-background {
+  @apply relative bg-no-repeat bg-top bg-cover;
+}
+
+.quote-background::after {
+  content: "";
+  @apply absolute inset-0 bg-linear-to-b from-black via-black/0 to-black z-1;
+}
+
+.quote-background::before {
+  content: "";
+  @apply absolute inset-0 bg-[url('/assets/hero_background.png')] bg-cover bg-top opacity-50 z-0;
+}
+
+.quote-background > * {
+  @apply z-10;
+}
