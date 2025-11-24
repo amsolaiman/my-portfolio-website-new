@@ -32,7 +32,7 @@ export default function Header() {
     },
     {
       label: "Works",
-      href: "#works",
+      href: "#work",
     },
     {
       label: "Resume",

@@ -16,7 +16,7 @@ export default function HeroNavigation() {
     },
     {
       label: "Works",
-      href: "#works",
+      href: "#work",
     },
   ];
 
