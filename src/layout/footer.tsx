@@ -24,18 +24,18 @@ export default function Footer() {
       id="footer"
       className="fixed bottom-0 inset-x-0 z-0 pt-24 text-background bg-foreground"
     >
-      <div className="px-4 flex items-baseline mb-4">
+      <div className="px-2 md:px-4 flex flex-col lg:flex-row lg:items-baseline mb-4">
         <h1 className="text-7xl font-sans">GET IN TOUCH</h1>
         <h5 className="text-xl uppercase">[Drop Me a Messsage]</h5>
       </div>
 
-      <div className="px-4 mb-6 grid grid-cols-[40%_60%]">
-        <div className="w-full border-t border-background pt-3 flex flex-col gap-2">
+      <div className="px-2 md:px-4 mb-6 grid grid-cols-1 lg:grid-cols-[40%_60%]">
+        <div className="w-full lg:border-t border-background py-3 flex flex-col gap-2">
           {CONTACTS.map((contact) => (
             <Link
               key={contact.label}
               href={contact.href}
-              className="text-xs uppercase flex gap-1 items-center hover:opacity-70 transition-opacity"
+              className="text-xs uppercase flex gap-1 items-center hover:opacity-70 transition-opacity w-fit"
             >
               {contact.label}
               <Iconify icon="ph:arrow-up-right-thin" className="size-4" />
@@ -70,7 +70,7 @@ export default function Footer() {
         width={1280}
         height={88}
         draggable={false}
-        className="-mb-1 w-full h-fit object-bottom object-cover"
+        className="lg:-mb-1 w-full h-fit object-bottom object-cover"
       />
     </footer>
   );
