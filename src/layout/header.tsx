@@ -43,9 +43,9 @@ export default function Header() {
   return (
     <header
       id="header"
-      className="fixed w-full flex items-center justify-between p-2 bg-background -translate-y-full transition-transform z-50"
+      className="fixed w-full flex items-baseline justify-between p-2 bg-background -translate-y-full transition-transform z-50"
     >
-      <div className="flex">
+      <div className="hidden md:flex">
         {LINKS.map((link, index) => (
           <span key={link.label} className="text-xs uppercase font-light ">
             <Link
@@ -69,6 +69,13 @@ export default function Header() {
           </span>
         ))}
       </div>
+
+      <button
+        type="button"
+        className="cursor-pointer md:hidden text-xs uppercase font-light hover:opacity-70 transition-opacity"
+      >
+        Menu
+      </button>
 
       <p className="text-xs font-sans uppercase font-thin [&>strong]:font-normal">
         <strong>Jasafanar</strong> Workshop
