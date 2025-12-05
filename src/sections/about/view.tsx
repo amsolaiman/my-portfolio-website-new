@@ -1,3 +1,5 @@
+"use client";
+
 // ----------------------------------------------------------------------
 
 export default function AboutView() {
@@ -13,8 +15,8 @@ export default function AboutView() {
   ];
 
   return (
-    <section id="about" className="pt-24 px-12">
-      <h3 className="w-5/6 max-w-250 text-2xl font-light uppercase [&>strong]:font-medium [&>em]:not-italic [&>em]:opacity-50">
+    <section id="about" className="pt-24 px-4 md:px-8 lg:px-12">
+      <h3 className="lg:w-5/6 max-w-250 text-2xl font-light uppercase [&>strong]:font-medium [&>em]:not-italic [&>em]:opacity-50">
         Hey! I&apos;m <strong>Moiz Solaiman</strong>, a frontend developer and
         designer based in the Philippines.&nbsp;
         <em>
@@ -23,9 +25,17 @@ export default function AboutView() {
         </em>
       </h3>
 
-      <p className="mt-4 text-xs font-light uppercase">
+      <p className="hidden lg:block mt-4 text-xs font-light uppercase">
         {SKILLS.map((_) => _).join(" | ")}
       </p>
+
+      <div className="flex lg:hidden mt-8 flex-col gap-2">
+        {SKILLS.map((_) => (
+          <p key={_} className="text-xs uppercase font-light">
+            {_}
+          </p>
+        ))}
+      </div>
     </section>
   );
 }
